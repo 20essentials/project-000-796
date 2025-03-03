@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collape</title>
+    <meta name="google" content="notranslate" />
+    <link rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="myButton">Foto 1</div>
+  <div class="content">
+    <img src="assets/super.avif">
+  </div>
+
+  <script>
+    let d = document;
+
+    d.addEventListener("click", e => {
+      if (e.target.matches(".myButton")) {
+        e.target.classList.toggle("active");
+        let hermano = e.target.nextElementSibling;
+        if (hermano.style.maxHeight) {
+          hermano.style.maxHeight = null; 
+        }
+        else {
+          hermano.style.maxHeight = hermano.scrollHeight + "px";
+        }
+      }
+    })
+  </script>
+  </body>
+</html>
