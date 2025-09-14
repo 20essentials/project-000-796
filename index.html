@@ -6,29 +6,8 @@
     <title>Collape</title>
     <meta name="google" content="notranslate" />
     <link rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="myButton">Foto 1</div>
-  <div class="content">
-    <img src="assets/super.avif">
-  </div>
-
-  <script>
-    let d = document;
-
-    d.addEventListener("click", e => {
-      if (e.target.matches(".myButton")) {
-        e.target.classList.toggle("active");
-        let hermano = e.target.nextElementSibling;
-        if (hermano.style.maxHeight) {
-          hermano.style.maxHeight = null; 
-        }
-        else {
-          hermano.style.maxHeight = hermano.scrollHeight + "px";
-        }
-      }
-    })
-  </script>
+    <script type="module" src="/App.jsx"></script>
   </body>
 </html>
